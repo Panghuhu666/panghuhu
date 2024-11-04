@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 100vh;
+        background-color: rgb(10, 10, 10);
+      }
+
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+        padding: 20px;
+        box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%), 0 0 0 2px white,
+          0.3em 0.3em 1em rgb(200 0 0 / 60%);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgb8 {
+        margin-bottom: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid black;
+        font-size: 14px;
+        align-items: flex-start;
+      }
+    </style>
+  </head>
+
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 1" class="flex baise mg8 column">
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-bottom: 1px solid rgb(20, 1, 1);
+          padding: 10px 20px;
+        "
+      >
+        <img
+          src="https://s21.ax1x.com/2024/11/04/pAr5tjf.jpg"
+          height="80px"
+          width="80px"
+        />
+        <div>巢安龙</div>
+      </div>
+      <div class="daohang">座右铭</div>
+      <div class="daohang">年龄</div>
+      <div class="daohang">学历</div>
+      <div class="daohang">爱好</div>
+    </div>
+    <!--主区域-->
+    <div class="flex flex1 column mg8">
+      <!--头部栏-->
+      <div style="z-index: 2; height: 60px" class="flex baise mg8"></div>
+      <!--内容区域-->
+      <div style="overflow: auto" class="flex flex1 mgt8">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mgr8">
+          <!--数据区-->
+          <div style="display: flex; height: 100px">
+            <div class="flex flex1 mg8 baise"></div>
+            <div class="flex flex1 mg8 baise"></div>
+            <div class="flex flex1 mg8 baise"></div>
+            <div class="flex flex1 mg8 baise"></div>
+          </div>
+
+          <!--列表区-->
+          <div class="flex column" class="mg8">
+            <div style="height: 160px" class="baise mg8"></div>
+            <div style="height: 160px" class="baise mg8"></div>
+            <div style="height: 160px" class="baise mg8"></div>
+            <div style="height: 160px" class="baise mg8"></div>
+
+            <div style="height: 160px" class="baise mg8"></div>
+
+            <div style="height: 160px" class="baise mg8"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column">
+          <!--消息区-->
+          <div style="height: 150px" class="baise"></div>
+          <!--提示区-->
+          <div style="height: 300px" class="mgt8 baise">
+      
+                <p 
+                style="
+                 font-size: 16px;
+                 color: red;
+                "
+                >
+                F. Scott Fitzgerald famously wrote: “The test of a first-rate intelligence is the ability to hold two opposing ideas in mind at the same time and still retain the ability to function. One should, for example, be able to see that things are hopeless yet be determined to make them otherwise.”
+                翻译：弗朗西斯·斯科特·菲茨杰拉德曾写过一句名言: “一流智力的测试是同时考虑两种对立观点的能力，同时仍能保持正常工作的能力。例如，人们应该能够看到事情已经没有希望，但还是下定决心要做出改变。”</p>
+                </p>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
