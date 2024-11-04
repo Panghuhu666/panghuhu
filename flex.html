@@ -44,12 +44,23 @@
         font-size: 14px;
         align-items: flex-start;
       }
+      @media (max-width:600px){
+        .cebian{
+            display: none;
+        }
+        .neirong{
+            flex-direction: column;
+        }
+        .shuju{
+            flex-direction: column;
+        }
+      }
     </style>
   </head>
 
   <body class="flex">
     <!--侧边栏-->
-    <div style="width: 200px; z-index: 1" class="flex baise mg8 column">
+    <div style="width: 200px; z-index: 1" class="flex baise mg8 column cebian">
       <div
         style="
           display: flex;
@@ -76,11 +87,11 @@
       <!--头部栏-->
       <div style="z-index: 2; height: 60px" class="flex baise mg8"></div>
       <!--内容区域-->
-      <div style="overflow: auto" class="flex flex1 mgt8">
+      <div style="overflow: auto" class="flex flex1 mgt8 neirong">
         <!--左区-->
         <div style="flex: 3" class="flex column mgr8">
           <!--数据区-->
-          <div style="display: flex; height: 100px">
+          <div style="display: flex; height: 100px" class="shuju">
             <div class="flex flex1 mg8 baise"></div>
             <div class="flex flex1 mg8 baise"></div>
             <div class="flex flex1 mg8 baise"></div>
